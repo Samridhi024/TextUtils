@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+✨ Text Utility App
+A simple and powerful React-based application to analyze and manipulate text efficiently. This tool allows users to convert text to uppercase/lowercase, remove extra spaces, count words/characters, and more — all in a clean, responsive UI.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+🚀 Getting Started
+This project was bootstrapped with Create React App.
 
-## Available Scripts
+📦 Installation
+Clone the repository:
 
-In the project directory, you can run:
+bash
+Copy
+Edit
+git clone https://github.com/your-username/text-utility-app.git
+Navigate to the project directory:
 
-### `npm start`
+bash
+Copy
+Edit
+cd text-utility-app
+Install dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+bash
+Copy
+Edit
+npm install
+▶️ Start the App
+To start the development server:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+bash
+Copy
+Edit
+npm start
+The app runs on: http://localhost:3000
+The page reloads automatically on code changes.
 
-### `npm test`
+🧪 Running Tests
+bash
+Copy
+Edit
+npm test
+Launches the test runner in interactive watch mode.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛠️ Build for Production
+bash
+Copy
+Edit
+npm run build
+Creates an optimized production build in the build folder.
 
-### `npm run build`
+⚙️ Customize Configuration
+To take full control of the build tools (Webpack, Babel, ESLint, etc.):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+bash
+Copy
+Edit
+npm run eject
+⚠️ Note: This action is permanent and cannot be undone.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🌐 Learn More
+React Documentation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Create React App Docs
 
-### `npm run eject`
+Deployment Guide
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Code Splitting
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Progressive Web App
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+📸 Features
+Convert text to UPPERCASE or lowercase
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Clear text input
 
-## Learn More
+Remove extra spaces
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Word & character count
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Live preview of your content
 
-### Code Splitting
+Toggle between light and dark mode
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📚 How I Built This
+I began learning React by exploring the official React documentation, practicing small UI components, and watching beginner-friendly video tutorials. To solidify my understanding, I built this project using functional components, state management with hooks, and routing.
 
-### Analyzing the Bundle Size
+🔧 Tools & Technologies Used
+React (with Functional Components)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+React Router v6 for page navigation
 
-### Making a Progressive Web App
+Bootstrap for styling and responsive layout
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+JSX for UI rendering and component logic
 
-### Advanced Configuration
+⚙️ Key Concepts Implemented
+Functional Components:
+I created custom reusable components like:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Navbar – for the top navigation bar
 
-### Deployment
+TextForm – for text analysis operations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+About – to describe the purpose of the app
 
-### `npm run build` fails to minify
+These components are imported and rendered in the main App.js file.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+State Management using useState:
+Used to handle dark mode toggle:
+const [mode, setMode] = useState("light");
+Props:
+Props were passed from App.js to components like Navbar and TextForm to control behavior and appearance:
+<Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+Conditional Rendering:
+Dynamically changed the background color of the page based on the selected mode.
+
+Routing with React Router v6:
+Enabled navigation between different pages (About & Home) using:
+<Routes>
+  <Route path="/about" element={<About />} />
+  <Route path="/" element={<TextForm heading="Enter the text to analyse:" mode={mode} />} />
+</Routes>
+
+
+Bootstrap Integration:
+Added responsive styling via Bootstrap: import 'bootstrap/dist/css/bootstrap.min.css';
+
+🤝 Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+
+📄 License
+This project is open source and available under the MIT License.
+
