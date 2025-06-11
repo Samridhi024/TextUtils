@@ -1,132 +1,156 @@
-✨ Text Utility App
-A simple and powerful React-based application to analyze and manipulate text efficiently. This tool allows users to convert text to uppercase/lowercase, remove extra spaces, count words/characters, and more — all in a clean, responsive UI.
+# ✨ Text Utility App
 
-🚀 Getting Started
-This project was bootstrapped with Create React App.
+A simple and powerful React-based application to **analyze and manipulate text efficiently**. This tool allows users to:
 
-📦 Installation
+- Convert text to **UPPERCASE** or **lowercase**
+- **Remove extra spaces**
+- **Count words and characters**
+- View **live preview**
+- Toggle between **light and dark mode**
+
+All within a clean, responsive UI.
+
+## 🚀 Getting Started
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+### 📦 Installation
+
 Clone the repository:
 
-bash
-Copy
-Edit
+```bash
 git clone https://github.com/your-username/text-utility-app.git
+````
+
 Navigate to the project directory:
 
-bash
-Copy
-Edit
+```bash
 cd text-utility-app
+```
+
 Install dependencies:
 
-bash
-Copy
-Edit
+```bash
 npm install
-▶️ Start the App
+```
+
+### ▶️ Start the App
+
 To start the development server:
 
-bash
-Copy
-Edit
+```bash
 npm start
-The app runs on: http://localhost:3000
+```
+
+Runs at: [http://localhost:3000](http://localhost:3000)
 The page reloads automatically on code changes.
 
-🧪 Running Tests
-bash
-Copy
-Edit
+---
+
+## 🧪 Running Tests
+
+```bash
 npm test
+```
+
 Launches the test runner in interactive watch mode.
 
-🛠️ Build for Production
-bash
-Copy
-Edit
-npm run build
-Creates an optimized production build in the build folder.
+---
 
-⚙️ Customize Configuration
+## 🛠️ Build for Production
+
+```bash
+npm run build
+```
+
+Creates an optimized production build in the `build` folder.
+
+---
+
+## ⚙️ Customize Configuration
+
 To take full control of the build tools (Webpack, Babel, ESLint, etc.):
 
-bash
-Copy
-Edit
+```bash
 npm run eject
-⚠️ Note: This action is permanent and cannot be undone.
+```
 
-🌐 Learn More
-React Documentation
+> ⚠️ **Note**: This action is permanent and cannot be undone.
 
-Create React App Docs
+---
 
-Deployment Guide
+## 🌐 Learn More
 
-Code Splitting
+* [React Documentation](https://reactjs.org/)
+* [Create React App Docs](https://create-react-app.dev/)
+* [Deployment Guide](https://create-react-app.dev/docs/deployment/)
+* [Code Splitting](https://create-react-app.dev/docs/code-splitting/)
+* [Progressive Web App](https://create-react-app.dev/docs/making-a-progressive-web-app/)
 
-Progressive Web App
+---
 
-📸 Features
-Convert text to UPPERCASE or lowercase
+## 📚 How I Built This
 
-Clear text input
+I began learning React by exploring the official [React documentation](https://reactjs.org/docs/getting-started.html), practicing small UI components, and watching beginner-friendly tutorials. To apply what I learned, I built this app using:
 
-Remove extra spaces
+### 🔧 Tools & Technologies Used
 
-Word & character count
+* **React** (with Functional Components)
+* **React Router v6** – for page navigation
+* **Bootstrap** – for responsive UI styling
+* **JSX** – for structuring UI components
 
-Live preview of your content
+### ⚙️ Key Concepts Implemented
 
-Toggle between light and dark mode
+* **Functional Components**:
 
-📚 How I Built This
-I began learning React by exploring the official React documentation, practicing small UI components, and watching beginner-friendly video tutorials. To solidify my understanding, I built this project using functional components, state management with hooks, and routing.
+  * `Navbar` – navigation bar
+  * `TextForm` – text analyzer
+  * `About` – app overview
+  * All imported and used in `App.js`
 
-🔧 Tools & Technologies Used
-React (with Functional Components)
+* **State Management (`useState`)**:
+  Used to toggle between light and dark mode:
 
-React Router v6 for page navigation
+  ```js
+  const [mode, setMode] = useState("light");
+  ```
 
-Bootstrap for styling and responsive layout
+* **Props**:
+  Props were passed from `App.js` to components like:
 
-JSX for UI rendering and component logic
+  ```jsx
+  <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+  ```
 
-⚙️ Key Concepts Implemented
-Functional Components:
-I created custom reusable components like:
+* **Conditional Rendering**:
+  Background color changes dynamically based on the selected mode.
 
-Navbar – for the top navigation bar
+* **Routing with React Router v6**:
 
-TextForm – for text analysis operations
+  ```jsx
+  <Routes>
+    <Route path="/about" element={<About />} />
+    <Route path="/" element={<TextForm heading="Enter the text to analyse:" mode={mode} />} />
+  </Routes>
+  ```
 
-About – to describe the purpose of the app
+* **Bootstrap Integration**:
+  Bootstrap styles were added globally:
 
-These components are imported and rendered in the main App.js file.
+  ```js
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  ```
 
-State Management using useState:
-Used to handle dark mode toggle:
-const [mode, setMode] = useState("light");
-Props:
-Props were passed from App.js to components like Navbar and TextForm to control behavior and appearance:
-<Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
-Conditional Rendering:
-Dynamically changed the background color of the page based on the selected mode.
+---
 
-Routing with React Router v6:
-Enabled navigation between different pages (About & Home) using:
-<Routes>
-  <Route path="/about" element={<About />} />
-  <Route path="/" element={<TextForm heading="Enter the text to analyse:" mode={mode} />} />
-</Routes>
+## 🤝 Contributing
 
-
-Bootstrap Integration:
-Added responsive styling via Bootstrap: import 'bootstrap/dist/css/bootstrap.min.css';
-
-🤝 Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
 
-📄 License
-This project is open source and available under the MIT License.
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
